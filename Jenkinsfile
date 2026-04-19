@@ -5,19 +5,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker compose build'
+                bat 'docker compose build'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'docker compose up -d'
+                bat 'docker compose up -d'
             }
         }
 
         stage('Verify') {
             steps {
-                sh 'docker ps'
+                bat 'docker ps'
             }
         }
     }
